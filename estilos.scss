@@ -331,6 +331,41 @@ padding: 5px;
     color: #AA8854;
 }
 
+@mixin sizes ($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+.redes {
+    @include sizes (100 px,40px)
+}
+
+$redes: (
+facebook: #55acee
+tiktok:blueviolet
+twitter: lightblue
+
+);
+
+@each $red, $color in $redes {
+    .btn-- #{$red} {
+        background-color: $color;
+    }
+}
+
+$estilos: (
+    color: #55acee
+    centro: center,
+    tfuente: 35px,
+    1rem : 1rem
+    );
+
+    div {
+        background-color: map-get($estilos,color);
+        text-align: map-get($estilos,centro);
+        padding: map-get($estilos, 1rem);
+        font-size: map-get($estilos-fuente);
+    }
 /*
 body {
     font-family: 'Cormorant SC', serif;

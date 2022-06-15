@@ -306,6 +306,11 @@ h6 {
   color: #AA8854;
 }
 
+.redes, .redes--aceptar, .redes--cancelar {
+  height: 40px;
+  width: 100 px;
+}
+
 /*
 body {
     font-family: 'Cormorant SC', serif;
